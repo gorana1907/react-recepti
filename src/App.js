@@ -3,14 +3,75 @@ import NavBar from './components/NavBar';
 import Pocetna from './components/Pocetna';
 import Footer from './components/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Recepti from './components/Recepti';
+import { useState } from 'react';
 
 function App() {
+  const[sviRecepti] = useState([
+
+    {
+      id:1,
+      naziv:"OVSENA KASA JABUKA CIMET",
+      slika: "https://www.pcrm.org/sites/default/files/Cinnamon-Apple-Oatmeal_0.jpg",
+      opis:" Potrebno je: 4 kašike ovsenih pahuljica  mleko (može i biljno)  2 jabuke  cimet šaka oraha med Priprema:  U teglu sipajte mleko i dodajte ovsene pahuljice. Stavite iseckanu jabuku, kašiku meda, iseckane orahe i začinite cimetom po ukusu i promešajte.  Ujutru promešajte još jednom i dodajte još nekoliko komada jabuke kao dekoraciju. ",
+      vreme: 30,
+      kalorije: 500,
+
+    },
+    {
+      id:2,
+      naziv:"JAJA NA OKO UZ NISKOMASNI SIR",
+      slika: "https://www.macheesmo.com/wp-content/uploads/2019/06/Sunny-Side-Up-Scramble.jpg",
+      opis:" Sastojci: 1 jaje u ovom slučaju kokošije, a može i od neke druge živine 1 kasika ulja prstohvat soli malo svježe samljevenog papra  Priprema: Zagrejte tiganj na veoma jaku temperaturu, stavite maslinovo ulje, pa tek onda dodajte jaje.  Kada dodate jaje smanjite toplotu, i tek onda dodajte malo putera, i to samo na belance, i stavite poklopac.",
+      vreme: 30,
+      kalorije: 700,
+
+    },
+    {
+      id:3,
+      naziv:"GRCKI JOGURT SA JAGODAMA I MEDOM",
+      slika: "https://helentzouganatos.com/wp-content/uploads/2015/09/Organic-Strawberries-with-Greek-Yoghurt-Honey-Pecans-Gluten-Free-2-2.jpg",
+      opis:" Sastojci: 100 g grčkog jogurta 2 žličice meda šaka očišćenih jagoda 1/4 mahune vanilije 1 kasika nesoljenih pistaca Priprema: Ugrijte med da malo omekša pa mu dodajte liker od ruže i ostrugane sjemenke vanilije. U zdjelicu stavite jagode, prelijte ih aromatiziranim medom pa sve pospite pistacijama.",
+      vreme: 15,
+      kalorije: 350,
+
+    },
+    {
+      id:4,
+      naziv:"HUMUS I STAPICI OD CELERA",
+      slika: "https://celebrationsathomeblog.com/wp-content/uploads/2012/11/classic-hummus-recipe-card-720x720.jpg",
+      opis:"Sastojci:  1 konzerva od 400g leblebije Sok od ½ Iceberg Salat Centar limuna  2 - 3 skuvane šargarepe, Suvi začini, so i biber (po ukusu)Uputstvo za pripremu: 1. Sve sastojke stavite u blender ili seckalicu. 2.  Mutite dok smesa ne postane kremasta i kompaktna. 3. Poslužite na krekerima ili integralnom hlebu kao namaz",
+      vreme: 20,
+      kalorije: 650,
+
+    },
+    {
+      id:5,
+      naziv:"PROTEINSKE PALACINKE",
+      slika: "https://images.immediate.co.uk/production/volatile/sites/30/2021/02/Protein-pancakes-b64bd40.jpg?resize=768,574",
+      opis:" Sastojci: 2 jaja, merica whey proteina i kasicica sode bikarbone. Priprema: U tiganj sipati malo kokosovog ulja. Pomesati sve sastojke. Dodajte malo vode ili bademovog mleka do zeljene konzistencije.Ispeci i posluziti sa agava sirupom.",
+      vreme: 15,
+      kalorije: 300,
+
+    },
+    {
+      id:6,
+      naziv:"DETOX SMUTI",
+      slika: "https://www.cubesnjuliennes.com/wp-content/uploads/2022/02/Green-Detox-Smoothie-Recipe.jpg",
+      opis:"Sastojci: pola zelene jabuke, malo iseckanog krastavca, 2 kasike limunovog soka, solja spanaca, solja kokosove vode. Priprema: Sve sastojke staviti u blender i miksovati dok se ne sjedine i dok ne dobijemo zeljenu gustinu napitka.",
+      vreme: 10,
+      kalorije: 200,
+
+    }
+  ])
+
   return (
     <div>
     <BrowserRouter>
         <NavBar></NavBar>
         <Routes>
             <Route path="/" element={<Pocetna></Pocetna>}></Route>
+            <Route path="/recepti" element={<Recepti  recepti={sviRecepti}></Recepti>}></Route>
           </Routes>
      </BrowserRouter>
      <Footer></Footer>
