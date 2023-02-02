@@ -1,4 +1,4 @@
-function Recept({rec, dodaj}) {
+function Recept({rec, dodaj,mod,izbaci}) {
 
 
     return (
@@ -7,7 +7,13 @@ function Recept({rec, dodaj}) {
         <div className="card-body">
           <h5 className="card-title">{rec.naziv}</h5>
           <p className="card-text">{rec.opis} <br /> Kalorije: {rec.kalorije}<br /> Vreme pripreme: {rec.vreme + "min"}</p>
-          <button className="btnDodaj" onClick={()=>dodaj(rec.id)}> DODAJ </button>
+          {mod==1 ?
+            <button className="btnDodaj" 
+            onClick={()=>dodaj(rec.id)}> DODAJ </button>
+            :
+            <button className="btnIzbaci" onClick={()=>izbaci(rec.id)}>IZBACI</button>
+
+          }
         </div>
       </div>
     );

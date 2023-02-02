@@ -90,6 +90,16 @@ function App() {
     setOmiljeniR(niz);
   }
 
+  function izbaci(id){
+    for(var i=0;i<sviRecepti.length;i++){
+      if(sviRecepti[i].id==id){
+        sviRecepti[i].omiljen=0;
+      }
+    }
+    var niz = sviRecepti.filter((rec)=>rec.omiljen==1);
+    setOmiljeniR(niz);
+  }
+
   return (
     <div>
     <BrowserRouter>
@@ -97,7 +107,7 @@ function App() {
         <Routes>
             <Route path="/" element={<Pocetna></Pocetna>}></Route>
             <Route path="/recepti" element={<Recepti  kriterijum={krterijumPretrage} recepti={sviRecepti} dodaj={dodaj}></Recepti>}></Route>
-            <Route path="/omiljeni" element={<Omiljeni kriterijum={krterijumPretrage}  recepti={omiljeniR}></Omiljeni>}></Route>
+            <Route path="/omiljeni" element={<Omiljeni kriterijum={krterijumPretrage}  recepti={omiljeniR}  izbaci={izbaci}></Omiljeni>}></Route>
           </Routes>
      </BrowserRouter>
      <Footer></Footer>
