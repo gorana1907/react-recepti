@@ -269,11 +269,18 @@ h4{
 
   .btnDodaj {
     background-color: #59c0d7;
-    padding-top: 8px;
-   padding-bottom: 8px;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding: 10px;
     font-size: 22px;
+    border: none;
+    color: #f1f1f1;
+  }
+  .btnDodaj:hover {
+    background-color: #AEE6E6;
+    padding: 10px;
+    font-size: 22px;
+    border: none;
+    color: #f1f1f1;
+    transform: scale(1.1);
   }
 
 
