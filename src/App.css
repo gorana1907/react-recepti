@@ -292,5 +292,46 @@ h4{
     transform: scale(1.1);
   }
 
+  /*za dodatne dugmice kopiraj*/
+  .btn:hover{
+    cursor: pointer;
+    color: #fff;
+    box-shadow: inset 200px 0 0 0 #54b3d6;;
+    }
+  
+  
+    .dugme-kopiranje{
+      background: rgb(82, 79, 79);
+      background-color: #FFA45B;
+      color: white; 
+      text-align: center;
+      margin-right: 140px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-bottom: 15px;
+      border: #f1f1f1;
+      border-bottom: 2px;
+    }
+  
+    .dugme-kopiranje:hover{
+      background: rgb(255, 255, 255);
+      cursor: pointer;
+      color: #fff;
+      box-shadow: inset 200px 0 0 0 #54b3d6;
+      border: #f1f1f1;
+    }
+  
+    .kontejner{
+      background-color: #FFA45B;
+      opacity: 80%;
+      display:-ms-inline-grid;
+      justify-content: space-between;
+      padding-left: 850px;
+      padding-right: 100px;
+  
+    }
+
 
 
